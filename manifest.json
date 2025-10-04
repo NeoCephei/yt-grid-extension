@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Grid Customizer",
+  "version": "3.0",
+  "description": "Cambia el número de columnas en YouTube desde el popup.",
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
